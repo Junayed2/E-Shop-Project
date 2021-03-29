@@ -28,7 +28,9 @@ client.connect((err) => {
       res.send(result.insertedCount);
     });
   });
-
+  app.get("/", (req, res) => {
+    res.send("Hello Muhammad Junayed");
+  });
   app.get("/products", (req, res) => {
     productsCollection.find({}).toArray((err, documents) => {
       res.send(documents);
