@@ -18,7 +18,7 @@ const client = new MongoClient(uri, {
 });
 client.connect((err) => {
   const productsCollection = client.db("emaJohnStore").collection("products");
-  const ordersCollection = client.db("emaJohnStore").collection("products");
+  const ordersCollection = client.db("emaJohnStore").collection("details");
   console.log("Database Connected");
   app.post("/addProduct", (req, res) => {
     const products = req.body;
